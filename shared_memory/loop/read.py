@@ -1,4 +1,3 @@
-# shared_memory_reader.py
 import mmap
 import posix_ipc
 import atexit
