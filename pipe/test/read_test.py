@@ -1,6 +1,6 @@
 import os
 
-fifo_path = 'serial_fifo'
+fifo_path = 'FIFO_File/serial_fifo'
 
 def consumer():
     if not os.path.exists(fifo_path):
