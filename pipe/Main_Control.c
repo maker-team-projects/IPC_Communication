@@ -8,6 +8,8 @@
 #define DATA_SIZE 5
 #define BUFFER_SIZE 1000
 #define SERIAL_FIFO_PATH "FIFO_File/serial_fifo"
+#define WEB_SEND_PATH "FIFO_File/web_send"
+#define WEB_RECEIVE_PATH "FIFO_File/web_receive"
 #define KEYBOARD_FIFO_PATH "FIFO_File/keyboard_fifo"
 #define KEYBOARD_FEEDBACK_FIFO_PATH "FIFO_File/keyboard_feedback_fifo"
 
@@ -18,7 +20,7 @@ void string_to_int_array(const char* message, int* result, int size);
 int loop_mode = 0;
 
 int main(){
-    int serial_fd, keyboard_fd, keyboard_feedback_fd;
+    int serial_fd, web_send_fd, web_receive_fd, keyboard_fd, keyboard_feedback_fd;
     char message[BUFFER_SIZE];
     int data[DATA_SIZE] = {90, 90, 90, 90, 90};
 
@@ -27,6 +29,18 @@ int main(){
 
     serial_fd = open(SERIAL_FIFO_PATH, O_WRONLY);
     if (serial_fd == -1){
+        perror("open");
+        exit(EXIT_FAILURE);
+    }
+
+    web_send_fd = open(WEB_SEND_PATH, O_WRONLY);
+    if (web_send_fd == -1){
+        perror("open");
+        exit(EXIT_FAILURE);
+    }
+
+    web_receive_fd = open(WEB_RECEIVE_PATH, O_RDONLY);
+    if (web_receive_fd == -1){
         perror("open");
         exit(EXIT_FAILURE);
     }
@@ -55,10 +69,19 @@ int main(){
             //int_array_printf(data, DATA_SIZE);
         }
 
+        write(web_send_fd, message, strlen(message));
+
+        memset(message, 0, sizeof(message));
+        if (read(web_receive_fd, message, sizeof(message) - 1) > 0){
+            string_to_int_array(message, data, DATA_SIZE);
+        }
+
         usleep(50000);
     }
 
     close(serial_fd);
+    close(web_send_fd);
+    close(web_receive_fd);
     close(keyboard_fd);
     close(keyboard_feedback_fd);
 
@@ -84,6 +107,30 @@ void fifo_check_make(){
             exit(EXIT_FAILURE);
         }
         printf("Serial FIFO file created.\n");
+    }
+    
+    if (access(WEB_SEND_PATH, F_OK) != -1){
+        printf("Web Send FIFO file exists.\n");
+    }
+    else{
+        printf("Web Send FIFO file does not exist. Creating Web Send FIFO...\n");
+        if (mkfifo(WEB_SEND_PATH, 0666) == -1){
+            perror("mkfifo");
+            exit(EXIT_FAILURE);
+        }
+        printf("Web Send FIFO file created.\n");
+    }
+
+    if (access(WEB_RECEIVE_PATH, F_OK) != -1){
+        printf("Web Receive FIFO file exists.\n");
+    }
+    else{
+        printf("Web Receive FIFO file does not exist. Creating Web Receive FIFO...\n");
+        if (mkfifo(WEB_RECEIVE_PATH, 0666) == -1){
+            perror("mkfifo");
+            exit(EXIT_FAILURE);
+        }
+        printf("Web Receive FIFO file created.\n");
     }
 
     if (access(KEYBOARD_FIFO_PATH, F_OK) != -1){
