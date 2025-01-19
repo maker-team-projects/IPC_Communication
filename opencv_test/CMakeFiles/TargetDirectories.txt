@@ -1,0 +1,3 @@
+/home/blakelee/programming/opencv_test/CMakeFiles/opencv_test.dir
+/home/blakelee/programming/opencv_test/CMakeFiles/edit_cache.dir
+/home/blakelee/programming/opencv_test/CMakeFiles/rebuild_cache.dir
