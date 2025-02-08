@@ -1,5 +1,5 @@
-CMakeFiles/read.dir/read.cpp.o: \
- /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/read.cpp \
+CMakeFiles/just_read.dir/just_read.cpp.o: \
+ /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/just_read.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

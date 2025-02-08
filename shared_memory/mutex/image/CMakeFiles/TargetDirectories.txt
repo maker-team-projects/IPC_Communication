@@ -1,4 +1,6 @@
 /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/read.dir
 /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/write.dir
+/home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/just_read.dir
+/home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/just_write.dir
 /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/edit_cache.dir
 /home/blakelee/programming/IPC_Communication/shared_memory/mutex/image/CMakeFiles/rebuild_cache.dir

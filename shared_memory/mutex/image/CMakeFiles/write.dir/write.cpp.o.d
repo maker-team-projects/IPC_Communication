@@ -150,7 +150,6 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/local/include/opencv4/opencv2/core.hpp \
  /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/core/version.hpp \
  /usr/include/c++/11/limits \
  /usr/local/include/opencv4/opencv2/core/hal/interface.h \
  /usr/include/c++/11/cstddef \
@@ -159,7 +158,9 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
- /usr/include/c++/11/stdlib.h \
+ /usr/include/c++/11/stdlib.h /usr/include/c++/11/array \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
  /usr/local/include/opencv4/opencv2/core/base.hpp \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -170,16 +171,14 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
  /usr/include/c++/11/functional /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map \
@@ -240,7 +239,6 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/local/include/opencv4/opencv2/core/matx.hpp \
  /usr/local/include/opencv4/opencv2/core/saturate.hpp \
  /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
  /usr/local/include/opencv4/opencv2/core/types.hpp \
  /usr/include/c++/11/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
@@ -267,9 +265,6 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/local/include/opencv4/opencv2/flann/defines.h \
  /usr/local/include/opencv4/opencv2/flann/config.h \
  /usr/local/include/opencv4/opencv2/core/affine.hpp \
- /usr/local/include/opencv4/opencv2/core/utils/logger.hpp \
- /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp \
- /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp \
  /usr/local/include/opencv4/opencv2/dnn.hpp \
  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
  /usr/local/include/opencv4/opencv2/core/async.hpp \
@@ -325,18 +320,10 @@ CMakeFiles/write.dir/write.cpp.o: \
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
  /usr/local/include/opencv4/opencv2/videoio.hpp \
  /usr/local/include/opencv4/opencv2/imgproc.hpp \
- /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/local/include/opencv4/opencv2/ml.hpp \
  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
  /usr/local/include/opencv4/opencv2/objdetect.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
  /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/face.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/barcode.hpp \
  /usr/local/include/opencv4/opencv2/photo.hpp \
  /usr/local/include/opencv4/opencv2/stitching.hpp \
  /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \

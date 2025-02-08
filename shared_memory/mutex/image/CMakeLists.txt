@@ -9,3 +9,9 @@ target_link_libraries(read ${OpenCV_LIBS})
 
 add_executable(write write.cpp)
 target_link_libraries(write ${OpenCV_LIBS})
+
+add_executable(just_read just_read.cpp)
+target_link_libraries(just_read ${OpenCV_LIBS})
+
+add_executable(just_write just_write.cpp)
+target_link_libraries(just_write ${OpenCV_LIBS})

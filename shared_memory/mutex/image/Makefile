@@ -142,6 +142,80 @@ write/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/build
 .PHONY : write/fast
 
+#=============================================================================
+# Target rules for targets named just_read
+
+# Build rule for target.
+just_read: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 just_read
+.PHONY : just_read
+
+# fast build rule for target.
+just_read/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_read.dir/build.make CMakeFiles/just_read.dir/build
+.PHONY : just_read/fast
+
+#=============================================================================
+# Target rules for targets named just_write
+
+# Build rule for target.
+just_write: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 just_write
+.PHONY : just_write
+
+# fast build rule for target.
+just_write/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_write.dir/build.make CMakeFiles/just_write.dir/build
+.PHONY : just_write/fast
+
+just_read.o: just_read.cpp.o
+.PHONY : just_read.o
+
+# target to build an object file
+just_read.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_read.dir/build.make CMakeFiles/just_read.dir/just_read.cpp.o
+.PHONY : just_read.cpp.o
+
+just_read.i: just_read.cpp.i
+.PHONY : just_read.i
+
+# target to preprocess a source file
+just_read.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_read.dir/build.make CMakeFiles/just_read.dir/just_read.cpp.i
+.PHONY : just_read.cpp.i
+
+just_read.s: just_read.cpp.s
+.PHONY : just_read.s
+
+# target to generate assembly for a file
+just_read.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_read.dir/build.make CMakeFiles/just_read.dir/just_read.cpp.s
+.PHONY : just_read.cpp.s
+
+just_write.o: just_write.cpp.o
+.PHONY : just_write.o
+
+# target to build an object file
+just_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_write.dir/build.make CMakeFiles/just_write.dir/just_write.cpp.o
+.PHONY : just_write.cpp.o
+
+just_write.i: just_write.cpp.i
+.PHONY : just_write.i
+
+# target to preprocess a source file
+just_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_write.dir/build.make CMakeFiles/just_write.dir/just_write.cpp.i
+.PHONY : just_write.cpp.i
+
+just_write.s: just_write.cpp.s
+.PHONY : just_write.s
+
+# target to generate assembly for a file
+just_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/just_write.dir/build.make CMakeFiles/just_write.dir/just_write.cpp.s
+.PHONY : just_write.cpp.s
+
 read.o: read.cpp.o
 .PHONY : read.o
 
@@ -198,8 +272,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... just_read"
+	@echo "... just_write"
 	@echo "... read"
 	@echo "... write"
+	@echo "... just_read.o"
+	@echo "... just_read.i"
+	@echo "... just_read.s"
+	@echo "... just_write.o"
+	@echo "... just_write.i"
+	@echo "... just_write.s"
 	@echo "... read.o"
 	@echo "... read.i"
 	@echo "... read.s"
